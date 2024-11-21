@@ -1,0 +1,49 @@
+Abstrato é algo que não é tangível, algo que não é palpável
+Abstrato é uma ideia, sabemos que ele existe mas não o que ele faz
+Métodos abstratos obrigam as class filhas a sobreescrever
+Para uma class ser abstrata ela precisa ser mãe, ela pode até ser abstrata sem ter filhos, mas é inútil
+Uma class filha pode ser abstrata nesse exemplo:
+                    Animal
+         pet                    silvestre
+  gato        cachocorro
+    (vão sobreescrever suas próprias dietas, pq cada um tem uma dieta)
+Se a class filha for abstrata vai ser necessário sobreescrever
+
+Casos que a mãe não precisa ser abstrata:
+                        UsuarioComum
+            usuarioAdm               usuarioGerente
+Não precisa ser abstrata pq o usuário comum pode ser usado sózinho, ele pode ser um objeto
+Caso que é abstrata, precisa obrigar a escolher um tipo de usuário:
+                               Usuario
+       usuarioEstagiario      usuarioAdm     usuarioGerente
+
+Pode criar uma lista de uma class abstrata normalmente, ela é representada em itálica e o nome pode ser "Figura"
+ou antes ou em cima do nome pode estar escrito <<abstract>>
+
+Se você não pode criar um objeto da class mãe ela é abstrata, se você não vai usar ela como um objeto é melhor ela ser abstrata
+
+Para deixar uma class abastrata é só colocar assim: "public abstract class Veiculo {"
+
+É para prevenir que alguém cadastre um veículo sem dizer qual tipo de objeto é nesse exemplo seria um carro ou bicicleta
+
+Classe abstrata não permite instância
+Instância é criar um objeto, colocando o "new"
+
+Podemos deixar o método abstrato, mas ele não pode ter corpo
+ASSINATURA: public abstract void exibirRelatorio(){
+CORPO:        System.out.println("Veiculo não especificado");
+FECHAMENTO DA ASSINATURA:    }
+
+O certo é assim "public abstract void exibirRelatorio();"
+
+Nós incrementamos/ sobreecrevemos dentro da outra class para completar o objetivo do código
+Exemplo:     @Override
+             public void exibirRelatorio() {
+                 System.out.println("Relatório da moto de: " + nomeCliente);
+
+                 if (possuiCapacete) {
+                     System.out.println("Temos capacetes melhores que o seu");
+                 } else {
+                     System.out.println("Muito perigoso, compre um capacete aqui");
+                 }
+             }

@@ -1,0 +1,7 @@
+Ele precisa ter o mesmo nome da class
+
+
+O construtor é public Cofrinho() {
+}
+
+Modificador de acesso deixando os atributos privados

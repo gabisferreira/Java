@@ -1,0 +1,16 @@
+Enumerador é para deixar padronizada as opções de escolha do usuário, por exemplo:
+Se você vai ter um plano que tem as opções: Prata, Ouro e Bronze e deixar que o usuário escolha,
+ele pode escrever de diversas formas "Pratz", "BRONSE", "Gold" e etc.
+
+É como se fosse uma lista de indicadores
+Você cria ele no mesmo lugar que cria class normalmente, mas seleciona enum, se escreve da mesma forma o título,
+só as opções que vão ser escritas assim:
+BRONZE,
+PRATA,
+OURO;
+
+Colocar a palavra final não permite mudar depois o valor definido primeiramente da variável
+
+iter cria um for sozinho
+
+.values() é um vetor que o java cria sozinho
